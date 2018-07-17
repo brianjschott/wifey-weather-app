@@ -1,0 +1,20 @@
+.maincols {
+    text-align:center;
+}
+
+.coltitle {
+    font-style:italic;
+}
+
+.forecastName {
+    font-weight:bold;
+}        
+
+#cloudlogo  {
+    font-size:50px;
+}
+
+#current {
+    border-right: solid 1px black;
+}
+
