@@ -1,3 +1,8 @@
+body {
+    background-color: #ADC6FF;
+    font-family: Poppins, sans-serif;
+}
+
 .maincols {
     text-align:center;
 }
@@ -11,10 +16,23 @@
 }        
 
 #cloudlogo  {
-    font-size:50px;
+    font-size:100px;
+    color: #1A5FFF;
+}
+
+#navbar {
+    background-color:#00FFFF;
 }
 
 #current {
     border-right: solid 1px black;
+}
+
+#forecastItem {
+    background-color: #C1AEFF;
+}
+
+p {
+    
 }
 

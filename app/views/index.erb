@@ -4,19 +4,20 @@
 <head>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link  rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wifey Weather App</title>
 </head>
 
 <body>
     <nav>
-        <div class="nav-wrapper blue lighten-4">
+        <div class="nav-wrapper" id="navbar">
             <a href="#" class="brand-logo"><i id="cloudlogo" class="material-icons">cloud</i></a>
             <!--<ul id="nav-mobile" class="right hide-on-med-and-down">-->
             <!--    <li><a href="sass.html">Sass</a></li>-->
@@ -26,24 +27,24 @@
         </div>
     </nav>
         <div class="row">
-            <div class="col s6 maincols" id="current">
+            <div class="col m6 maincols" id="current">
                 <h2 class="coltitle">Current Conditions</h1>
                 <div class="row">
-                    <div class="col s6">
+                    <div class="col m6">
                         <img src="<%= @currentConditionsPic %>">
                         <h4><%= @currentConditions %></h4>
                     </div>
-                    <div class="col s6">
+                    <div class="col m6">
                         <h1><%= @currentTemp %>&deg;F</h1>
                     </div>
                 </div>
             </div>
-            <div class="col s6 maincols" id="forecast">
+            <div class="col m6 maincols" id="forecast">
                 <h2 class="coltitle">Forecast</h1>
                   <ul class="collection">
                       
                     <% for item in @forecastArray do %>  
-                        <li class="collection-item avatar">
+                        <li class="collection-item avatar" id="forecastItem">
                           <img src="<%= item["icon"]%>" alt="" class="circle">
                           <span class="title forecastName"><%= item["name"] %></span>
                           <p><%= item["detailedForecast"] %></p>
